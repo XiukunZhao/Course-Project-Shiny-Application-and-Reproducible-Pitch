@@ -1,0 +1,40 @@
+Developing Data Products: World Temperature Visualization
+========================================================
+author: Xiukun Zhao
+date: 10/09/2016
+autosize: true
+
+Introduction
+========================================================
+
+- This Shiny App is used for visualizing the global temperature from 1880 to 2014.
+- The data set deals with world temperatures and comes from NASA. 
+- The Shiny Apps can be found: <https://ying.shinyapps.io/DataProduct/>.
+
+Dataset
+========================================================
+
+Here is a part of the dataset.
+
+```{r table, echo=FALSE}
+require(data.table)
+data <- fread("GISTEMPData.csv")
+head(data,10)
+```
+
+Interface
+========================================================
+
+```{r interface1, echo=FALSE}
+library(png)
+img1<-readPNG("1.png")
+grid::grid.raster(img1)
+```
+
+Interface
+========================================================
+
+```{r interface2, echo=FALSE}
+img2<-readPNG("2.png")
+grid::grid.raster(img2)
+```
